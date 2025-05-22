@@ -1,3 +1,3 @@
 //App entry point
-import "./styles.css";
+import "./src/styles/main.css";
 
