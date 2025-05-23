@@ -12,4 +12,8 @@ const importantTask = new ToDo(
     false,
 )
 
+//Testing the functionality. All seems good
+importantTask.toggleCompletion()
+importantTask.addChecklistItem("Dance with Rina")
+importantTask.priority = "Low priority"
 console.log(importantTask)

@@ -5,7 +5,7 @@ export default class ToDo {
   static nextId = 1;
 
   constructor(title, description, dueDate, priority, checklist, completed) {
-    this.id = ToDo.nextIdid++;
+    this.id = ToDo.nextId++;
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
