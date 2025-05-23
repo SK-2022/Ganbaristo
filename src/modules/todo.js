@@ -1,4 +1,5 @@
 //Remember to use solid code principles
+import {  printCompletionMessage  } from "../dom/uiHelpers";
 
 export class ToDo {
   // The constructor initializes the properties of the ToDo object
@@ -18,19 +19,19 @@ export class ToDo {
     if (details.title) this.title = details.title;
     if (details.description) this.description = details.description;
     if (details.dueDate) this.dueDate = details.dueDate;
-    if (details.priority) this.priority = details.priority
+    if (details.priority) this.priority = details.priority;
   }
 
-    checkCompletion(boolean) {
-        if(true) {
-            printCompletionMessage(this.title)
-        }
-    }
-
-    
+  //This toggles whether the todo list item is completed(true) or not completed(false)
+  toggleCompletion() {
+    this.completed = !this.completed
+  }
 
 }
 
-function printCompletionMessage(toDoListTitle) {
-    console.log(`${toDoListTitle} has been completed!`)
-}
+function checkCompletion() {
+    if (this.completed) {
+      printCompletionMessage(this.title);
+    } 
+  }
+
