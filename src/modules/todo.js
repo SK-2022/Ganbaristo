@@ -1,7 +1,6 @@
-//Remember to use solid code principles
-import {  printCompletionMessage  } from "../dom/uiHelpers";
+//Remember to use SOLID code principles
 
-export class ToDo {
+export default class ToDo {
   // The constructor initializes the properties of the ToDo object
   static nextId = 1;
 
@@ -15,6 +14,7 @@ export class ToDo {
     this.completed = completed;
   }
 
+  //Allows users to edit each of the toDo list parameters
   editToDoListItem(details) {
     if (details.title) this.title = details.title;
     if (details.description) this.description = details.description;
@@ -24,14 +24,15 @@ export class ToDo {
 
   //This toggles whether the todo list item is completed(true) or not completed(false)
   toggleCompletion() {
-    this.completed = !this.completed
+    this.completed = !this.completed;
   }
+
+  //Checks if the todo list item is completed
+  isCompleted(){
+    return this.completed
+  }
+
 
 }
 
-function checkCompletion() {
-    if (this.completed) {
-      printCompletionMessage(this.title);
-    } 
-  }
 
