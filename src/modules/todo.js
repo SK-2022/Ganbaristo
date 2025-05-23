@@ -5,7 +5,7 @@ export default class ToDo {
   static nextId = 1;
 
   constructor(title, description, dueDate, priority, checklist, completed) {
-    this.id = ToDo.id++;
+    this.id = ToDo.nextIdid++;
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
@@ -32,7 +32,13 @@ export default class ToDo {
     return this.completed
   }
 
+  addChecklistItem(checklistItem) {
+    this.checklist.push(checklistItem)
+  }
 
+  removeChecklistItem(index) {
+    this.checklist.splice(index, 1)
+  }
 }
 
 
