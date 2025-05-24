@@ -1,5 +1,4 @@
 //Remember to use SOLID code principles
-
 export default class ToDo {
   // The constructor initializes the properties of the ToDo object
   static nextId = 1;
