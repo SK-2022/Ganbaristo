@@ -32,10 +32,11 @@ export default class ToDo {
     return this.completed
   }
 
+  //Adds an item to the checklist array
   addChecklistItem(checklistItem) {
     this.checklist.push(checklistItem)
   }
-
+  //Removes an item at the specified index in the checklist array
   removeChecklistItem(index) {
     this.checklist.splice(index, 1)
   }
