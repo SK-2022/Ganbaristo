@@ -10,7 +10,7 @@ export default class ToDo {
     this.dueDate = dueDate;
     this.priority = priority;
     this.checklist = checklist;
-    this.completed = completed;
+    this.completed = completed; 
   }
 
   //Allows users to edit each of the toDo list parameters
@@ -41,4 +41,6 @@ export default class ToDo {
   }
 }
 
+//An array that has priorities to choose from.
+export const prioritySelectionsArray = ["Low", "Medium", "High"]
 

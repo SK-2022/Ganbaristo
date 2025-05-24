@@ -20,6 +20,7 @@ theOdinProject.addToDoListItem(importantTask);
 const appStateManager = new AppStateManager([]);
 appStateManager.addToProjectsArray(theOdinProject);
 
+//Load from localStorage when the app starts. Console.log() first. Add DOM elements later
 console.log(appStateManager.getProjectsArray());
 
 // Now test ToDo methods and save after each change
