@@ -3,6 +3,7 @@ import "/src/styles/main.css";
 
 import ToDo  from "./modules/todo.js";
 import Project from "./modules/project.js";
+import AppStateManager from "./modules/appState.js";
 
 const importantTask = new ToDo(
     "Incredibly Important task",
@@ -25,3 +26,11 @@ const theOdinProject = new Project("JavaScript Section", [])
 theOdinProject.addToDoListItem(importantTask)
 
 console.log(theOdinProject)
+
+//Testing the functionality of the AppStateManager
+
+const projectsArray = new AppStateManager([])
+
+projectsArray.addToProjectsArray(theOdinProject)
+
+console.log(projectsArray)
