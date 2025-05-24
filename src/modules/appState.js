@@ -1,0 +1,1 @@
+//This is a central place to store all projects and handle app-wide actions like adding/deleting a project or saving to localStorage.

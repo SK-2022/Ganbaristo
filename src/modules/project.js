@@ -1,18 +1,30 @@
 //REMEMBER SOLID PRINCIPLES
 
 export default class Project {
-  constructor(name, todos) {
+  constructor(name, todosArray) {
     this.name = name;
-    this.todos = todos;
+    this.todosArray = todosArray;
   }
 
   // Add a single ToDo object to the project's todo array
   addToDoListItem(item) {
-    this.todos.push(item);
+    this.todosArray.push(item);
   }
 
   // Remove a ToDo object at the specified index
   removeToDoListItem(index) {
-    this.todos.splice(index, 1);
+    this.todosArray.splice(index, 1);
+  }
+
+  //Filters the todosArray for todos that aren't completed
+  retrieveActiveToDos() {
+    const activeTodos = this.todosArray.filter((todo) => !todo.completed);
+    return activeTodos;
+  }
+
+  //Filters the todosArray for todos that are completed.
+  retrieveCompletedToDos() {
+    const completedTodos = this.todosArray.filter((todo) => todo.completed);
+    return completedTodos;
   }
 }
