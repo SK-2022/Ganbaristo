@@ -1,4 +1,6 @@
 //Remember to use SOLID code principles
+import { formatDistance, subDays, formatDistanceToNow, format, formatRelative } from "date-fns";
+
 export default class ToDo {
   // The constructor initializes the properties of the ToDo object
   static nextId = 1;
@@ -39,8 +41,17 @@ export default class ToDo {
   removeChecklistItem(index) {
     this.checklist.splice(index, 1)
   }
+
+  //Format the date for the due date of the to do list item.
+  formatDate(){
+    return format(new Date(this.dueDate), 'PPPP')
+  }
+
+  //Checks if the toDolistItem is overdue. STILL WORKING
+  // isOverdue(){
+  //   if(format(new Date(this.dueDate), 'PPPP') ) 
+  // }
 }
 
 //An array that has priorities to choose from.
 export const prioritySelectionsArray = ["Low", "Medium", "High"]
-
