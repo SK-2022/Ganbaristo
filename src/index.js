@@ -3,14 +3,17 @@ import "/src/styles/main.css";
 import ToDo from "./modules/todo.js";
 import Project from "./modules/project.js";
 import AppStateManager from "./modules/appState.js";
+import { prioritySelectionsArray } from "./modules/todo.js";
+import { formatDate } from "date-fns";
+import ChecklistItem from "./modules/checklist.js";
 
 // Create initial todo list test item
 const importantTask = new ToDo(
   "Incredibly Important task",
   "Work on the Javascript Section on The Odin Project",
-  "3rd of May",
-  "High priority",
-  ["Bonus task 1", "Bonus task 2"],
+  new Date(),
+  prioritySelectionsArray[2],
+  [new ChecklistItem("Transfer money to Jennifer tonight", false), new ChecklistItem("Head to the Gym on Friday", true)],
   false
 );
 
@@ -28,12 +31,14 @@ importantTask.toggleCompletion();
 appStateManager.saveToLocalStorage();
 
 importantTask.addChecklistItem(
-  "Talk to Mr Maeda about your projects especially Javascript"
+  new ChecklistItem("Talk to Mr Maeda", false)
 );
 appStateManager.saveToLocalStorage();
 
-importantTask.priority = "Low priority";
+//Toggle works property for checklist items
+console.log(importantTask.checklist[0].toggleDone())
 appStateManager.saveToLocalStorage();
+
 
 console.log(importantTask);
 console.log(theOdinProject);
