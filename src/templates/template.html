@@ -40,9 +40,13 @@
       <div class="settings-header">
         <button class="settings-button">settings and view</button>
       </div>
-      <div class="today-div">Today</div>
+      <div class="todays-tasks-div">
+        <div class="today-title">Today</div>
+        <div class="task-quantifier">You have 100 tasks to do today. Good luck!</div>
+      </div>
       <div class="to-do-list-parent-container">
         <div>My Ganbaristo</div>
+        <!-- Users should only see the title of the to do list item and be able to see all properties once they click on the item. -->
         <div class="to-do-list-container">
           <button class="checklist-button">a</button>
           <div>Do it 1</div>
@@ -57,6 +61,15 @@
         </div>
         <div class="add-task-button-container">
           <button class="add-task-button">Add task</button>
+        </div>
+        <div class="to-do-list-dialog-box">
+          <div class="to-do-list-title">This is the title</div>
+          <div class="to-do-lis-description">This is the description</div>
+          <div class="date-and-priority-and-confirm-container">
+            <button class="to-do-list-date">Select Date</button>
+            <button class="to-do-list-priority">Priority</button>
+            <button class="confirm-task-button">confirm arrow</button>
+          </div>
         </div>
       </div>
     </main>
