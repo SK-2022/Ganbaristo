@@ -40,6 +40,7 @@ export function renderTodosList(todosArray) {
     //Create the checklist button for each to do item
     const checklistButton = document.createElement("button");
     checklistButton.classList.add("checklist-button");
+    checklistButton.textContent = "done"
 
     //Create the todo title div for the title.
     const todoTitleDiv = document.createElement("div");
