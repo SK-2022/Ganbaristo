@@ -4,7 +4,23 @@
     box-sizing: border-box;
 }
 
-body {
+.content {
     font-family: Arial, sans-serif;
-    background-color: rgb(40, 20, 139)
+    background-color: #FFFFFF;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.side-bar {
+    width: 250px;
+    height: 100vh;
+    background-color: #F0F0F0;
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+
+.to-do-list-container {
+    display: flex;
 }

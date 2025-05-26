@@ -2,21 +2,22 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>To Do List</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles/main.css">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../styles/main.css" />
   </head>
   <body class="content">
     <section class="side-bar">
       <div class="profile-picture-container">
-        <img src="#" alt="your profile picture">
-        <button class="notification-bell"></button>
-        <button class="side-bar-button"></button>
+        <img src="#" alt="your profile picture" />
+        <button class="notification-bell">bell</button>
+        <button class="side-bar-button">close</button>
       </div>
       <ul class="side-bar-list-item-container">
+        <!-- ADD SVGs to this later -->
         <li class="side-bar-list-item"><a href="#">Add task</a></li>
         <li class="side-bar-list-item"><a href="#">Search</a></li>
         <li class="side-bar-list-item"><a href="#">Inbox</a></li>
@@ -29,12 +30,35 @@
         <p>My Projects</p>
         <ul class="project-list-items">
           <li class="project-list-item"><a href="#">The Odin Project</a></li>
-          <li class="project-list-item"><a href="#">Operation Beach Body</a></li>
-          <li class="project-list-item"><a href="#"></a></li>
-          <li class="project-list-item"><a href="#"></a></li>
-          <li class="project-list-item"><a href="#"></a></li>
+          <li class="project-list-item">
+            <a href="#">Operation Beach Body</a>
+          </li>
         </ul>
       </div>
     </section>
+    <main class="main-content-container">
+      <div class="settings-header">
+        <button class="settings-button">settings and view</button>
+      </div>
+      <div class="today-div">Today</div>
+      <div class="to-do-list-parent-container">
+        <div>My Ganbaristo</div>
+        <div class="to-do-list-container">
+          <button class="checklist-button">a</button>
+          <div>Do it 1</div>
+        </div>
+        <div class="to-do-list-container">
+          <button class="checklist-button">a</button>
+          <div>Do it 2</div>
+        </div>
+        <div class="to-do-list-container">
+          <button class="checklist-button">a</button>
+          <div>Do it 3</div>
+        </div>
+        <div class="add-task-button-container">
+          <button class="add-task-button">Add task</button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
