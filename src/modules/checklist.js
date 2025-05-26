@@ -14,3 +14,5 @@ export default class ChecklistItem {
         return this.done
     }
 }
+
+//HAVE A COUNTER FOR YOUR CHECKLIST ITEMS AS SUBTASKS
