@@ -31,10 +31,6 @@ appStateManager.addToProjectsArray(theFitnessProject);
 //Load from localStorage when the app starts. Console.log() first. Add DOM elements later
 console.log(appStateManager.getProjectsArray());
 
-// Now test ToDo methods and save after each change
-importantTask.toggleCompletion();
-appStateManager.saveToLocalStorage();
-
 importantTask.addChecklistItem(new ChecklistItem("Talk to Mr Maeda", false));
 appStateManager.saveToLocalStorage();
 
