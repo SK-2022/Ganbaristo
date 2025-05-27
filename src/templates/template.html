@@ -9,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/main.css" />
   </head>
+
   <body class="content">
+    <!-- SIDE BAR -->
     <section class="side-bar">
       <div class="profile-picture-container">
         <img src="#" alt="your profile picture" />
@@ -27,49 +29,49 @@
         <li class="side-bar-list-item"><a href="#">Completed</a></li>
       </ul>
       <div class="projects-list-container">
-        <p>My Projects</p>
-        <ul class="project-list">
-          <li class="project-list-item"><a href="#">The Odin Project</a></li>
-          <li class="project-list-item">
-            <a href="#">Operation Beach Body</a>
-          </li>
-        </ul>
+        <div class="my-projects-header">
+          <p>My Projects</p>
+          <span><button class="add-project-button">+</button></span>
+        </div>
+        <ul class="project-list"></ul>
       </div>
     </section>
     <main class="main-content-container">
+      <!-- SETTINGS HEADER -->
       <div class="settings-header">
         <button class="settings-button">settings and view</button>
       </div>
       <div class="todays-tasks-div">
         <div class="today-title">Today</div>
-        <div class="task-quantifier">You have 100 tasks to do today. Good luck!</div>
+        <div class="task-quantifier">
+          You have 100 tasks to do today. Good luck!
+        </div>
       </div>
+      <div>My Ganbaristo</div>
+      <!-- TO DO LIST CONTAINER -->
       <div class="to-do-list-parent-container">
-        <div>My Ganbaristo</div>
         <!-- Users should only see the title of the to do list item and be able to see all properties once they click on the item. -->
         <div class="to-do-list-container">
           <button class="checklist-button">a</button>
-          <div>Do it 1</div>
-        </div>
-        <div class="to-do-list-container">
-          <button class="checklist-button">a</button>
-          <div>Do it 2</div>
-        </div>
-        <div class="to-do-list-container">
-          <button class="checklist-button">a</button>
-          <div>Do it 3</div>
+          <div class="to-do-title">Do it 1</div>
+          <div class="to-do-description"></div>
+          <div class="date-and-priority-container">
+            <div class="to-do-date"></div>
+            <div class="to-do-priority"></div>
+          </div>
         </div>
         <div class="add-task-button-container">
           <button class="add-task-button">Add task</button>
         </div>
-        <div class="to-do-list-dialog-box">
-          <div class="to-do-list-title">This is the title</div>
-          <div class="to-do-lis-description">This is the description</div>
-          <div class="date-and-priority-and-confirm-container">
-            <button class="to-do-list-date">Select Date</button>
-            <button class="to-do-list-priority">Priority</button>
-            <button class="confirm-task-button">confirm arrow</button>
-          </div>
+      </div>
+      <!-- TO DO LIST INPUT FORM -->
+      <div class="to-do-list-dialog-box">
+        <div class="to-do-list-title-input">This is the title</div>
+        <div class="to-do-list-description-input">This is the description</div>
+        <div class="date-priority-input-and-confirm-container">
+          <button class="to-do-list-date-input">Select Date</button>
+          <button class="to-do-list-priority-input">Priority</button>
+          <button class="confirm-task-button">confirm arrow</button>
         </div>
       </div>
     </main>
