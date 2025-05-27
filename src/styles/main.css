@@ -24,3 +24,7 @@
 .to-do-list-container {
     display: flex;
 }
+
+.completed {
+    display: none;
+}
