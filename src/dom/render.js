@@ -30,7 +30,7 @@ export function renderProjectList(projectsArray) {
 export function renderTodosList(todosArray) {
   //Clear the current list to avoid duplicates
   todosListParentContainer.innerHTML = "";
-
+  
   //Loop through each to do and create a div for it
   todosArray.forEach((todo) => {
     //Create the todo item container
@@ -52,4 +52,8 @@ export function renderTodosList(todosArray) {
     todoListContainer.appendChild(todoTitleDiv);
     todosListParentContainer.appendChild(todoListContainer);
   });
+}
+
+export function renderChecklistItems(checklist) {
+
 }
