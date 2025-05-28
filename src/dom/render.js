@@ -113,8 +113,7 @@ export function renderChecklistItems(checklist) {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = item.done;
-    checkbox.disabled = true; // Remove this if you want it to be interactive
-
+    
     const label = document.createElement("span");
     label.textContent = item.title;
 
