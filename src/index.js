@@ -43,4 +43,4 @@ console.log(theOdinProject);
 console.log(appStateManager.getProjectsArray());
 
 renderProjectList(appStateManager.projectsArray);
-renderTodosList(theOdinProject.todosArray)
+renderTodosList(theOdinProject.todosArray);

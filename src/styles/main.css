@@ -28,3 +28,16 @@
 .completed {
     display: none;
 }
+
+
+/* Change color depending on priority */
+
+.priority-high {
+  color: red;
+}
+.priority-medium {
+  color: orange;
+}
+.priority-low {
+  color: green;
+}
