@@ -65,15 +65,24 @@
         </div>
       </div>
       <!-- TO DO LIST INPUT FORM -->
-      <div class="to-do-list-dialog-box">
-        <div class="to-do-list-title-input">This is the title</div>
-        <div class="to-do-list-description-input">This is the description</div>
-        <div class="date-priority-input-and-confirm-container">
-          <button class="to-do-list-date-input">Select Date</button>
-          <button class="to-do-list-priority-input">Priority</button>
-          <button class="confirm-task-button">confirm arrow</button>
+       <!-- Add subtasks input area LATER -->
+      <form class="to-do-list-dialog-box">
+        <div class="to-do-list-title-input-container">
+          <input type="text" class="to-do-list-title-input" name="title" placeholder="Enter title">
         </div>
-      </div>
+        <div class="to-do-list-description-input-container">
+          <input type="text" class="to-do-list-description-input" name="description" placeholder="Enter description" />
+        </div>
+        <div class="date-priority-input-and-confirm-container">
+          <input type="date" name="date" class="to-do-list-date-input" />
+          <select name="priority" class="to-do-list-priority-input">
+            <option value="High" data-index="2">High</option>
+            <option value="Medium" data-index="1">Medium</option>
+            <option value="Low" data-index="0">Low</option>
+          </select>
+          <button type="submit" class="create-todo-button">Create todo</button>
+        </div>
+      </form>
     </main>
   </body>
 </html>
