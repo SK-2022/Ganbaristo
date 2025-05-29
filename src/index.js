@@ -7,6 +7,7 @@ import { prioritySelectionsArray } from "./modules/todo.js";
 import ChecklistItem from "./modules/checklist.js";
 import { renderProjectList } from "./dom/render.js";
 import { renderTodosList } from "./dom/render.js";
+import { renderChecklistItems } from "./dom/render.js";
 
 // Create initial todo list test item
 const importantTask = new ToDo(
@@ -43,4 +44,4 @@ console.log(theOdinProject);
 console.log(appStateManager.getProjectsArray());
 
 renderProjectList(appStateManager.projectsArray);
-renderTodosList(theOdinProject.todosArray)
+renderTodosList(theOdinProject.todosArray);

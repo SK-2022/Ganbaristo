@@ -49,7 +49,7 @@ export function renderTodosList(todosArray) {
       todoListContainer.classList.add("completed");
     } else {
       checklistButton.setAttribute("data-completed", "false");
-      todoListContainer.classList.remove("completed")
+      todoListContainer.classList.remove("completed");
     }
 
     //Create the todo title container for the title.
@@ -76,6 +76,15 @@ export function renderTodosList(todosArray) {
     todoPriority.classList.add("to-do-priority");
     todoPriority.textContent = `Priority: ${todo.priority}`;
 
+    // Add a class based on priority value
+    if (todo.priority === "High") {
+      todoPriority.classList.add("priority-high");
+    } else if (todo.priority === "Medium") {
+      todoPriority.classList.add("priority-medium");
+    } else if (todo.priority === "Low") {
+      todoPriority.classList.add("priority-low");
+    }
+
     // Add the checklist button and title to the todo container, then append it to the parent container
     todoListContainer.appendChild(checklistButton);
     todoListContainer.appendChild(todoTitleDiv);
@@ -84,8 +93,38 @@ export function renderTodosList(todosArray) {
     todoListContainer.appendChild(dateAndPriorityContainer);
     dateAndPriorityContainer.appendChild(todoDate);
     dateAndPriorityContainer.appendChild(todoPriority);
+
+    const checklistUl = renderChecklistItems(todo.checklist);
+    todoListContainer.appendChild(checklistUl);
+
     todosListParentContainer.appendChild(todoListContainer);
   });
 }
 
-export function renderChecklistItems(checklist) {}
+export function renderChecklistItems(checklist) {
+  const ul = document.createElement("ul");
+  ul.classList.add("checklist");
+
+  checklist.forEach((item) => {
+    const li = document.createElement("li");
+    li.classList.add("checklist-item");
+
+    // Optionally, use a checkbox to show completion
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = item.done;
+    
+    const label = document.createElement("span");
+    label.textContent = item.title;
+
+    if (item.done) {
+      li.classList.add("done");
+    }
+
+    li.appendChild(checkbox);
+    li.appendChild(label);
+    ul.appendChild(li);
+  });
+
+  return ul;
+}
