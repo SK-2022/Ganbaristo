@@ -11,9 +11,11 @@ export function renderProjectList(projectsArray) {
   projectList.innerHTML = "";
 
   //Loop through each project and create a list item
-  projectsArray.forEach((project) => {
+  projectsArray.forEach((project, index) => {
     const li = document.createElement("li");
     li.classList.add("project-list-item");
+    // Add attribute for access
+    li.setAttribute("data-index", index); // <--- Add this line
 
     //Create an anchor tag for the project name
     const anchorTag = document.createElement("a");

@@ -10,8 +10,19 @@ const dateInput = document.querySelector('.to-do-list-date-input');
 const prioritySelect = document.querySelector('.to-do-list-priority-input');
 
 // Example: reference to your current project (replace with your actual logic)
-
+const projectsList = document.querySelectorAll('.project-list-item')
 let currentProject; // You should set this to the active project in your app
+//When any of the projects are clicked, they will become the current project. Add an event listener to all with the class 'project-list-item'
+function handleSelectCurrentProjectClick() {
+    projectsList.forEach(project => {
+        project.addEventListener('click', () => {
+            currentProject = project
+        })
+    })
+
+}
+
+// LOOK AT THE SECOND EXAMPLE OF THE EVENTS CODE FROM COPILOT
 
 function handleCreateTodoClick(event) {
     event.preventDefault();
