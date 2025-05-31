@@ -14,8 +14,8 @@ export function renderProjectList(projectsArray) {
   projectsArray.forEach((project, index) => {
     const li = document.createElement("li");
     li.classList.add("project-list-item");
-    // Add attribute for access
-    li.setAttribute("data-index", index); // <--- Add this line
+    // Add attribute for access to the index as set by the parameter
+    li.setAttribute("data-index", index); // 
 
     //Create an anchor tag for the project name
     const anchorTag = document.createElement("a");
