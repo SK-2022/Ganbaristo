@@ -1,5 +1,4 @@
 import ToDo from "../modules/todo.js";
-import ChecklistItem from "../modules/checklist.js";
 import { renderTodosList } from "./render.js";
 import appStateManager from "../modules/appState.js";
 
@@ -18,8 +17,15 @@ function handleSelectCurrentProjectClick(event) {
   if (!clickedItem) return;
 
   const index = clickedItem.getAttribute("data-index");
-  currentProject = appStateManager.projectsArray[index]; // or your projects array
 
+  //Checks if there is a project at the specified index of projectsArray and
+  // alerts if its not found.Note, you were getting an error here because you were using two different instances of appStateManager. Creating one instance that you shared between events.js and index.js solved the issue.
+  const project = appStateManager.projectsArray[Number(index)];
+  if (!project) {
+    alert("Project not found!");
+    return;
+  }
+  currentProject = project;
   renderTodosList(currentProject.todosArray);
 }
 

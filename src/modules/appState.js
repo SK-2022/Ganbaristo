@@ -1,6 +1,6 @@
 //This is a central place to store all projects and handle app-wide actions like adding/deleting a project or saving to localStorage.
 
-export default class AppStateManager {
+ class AppStateManager {
   constructor(projectsArray) {
     this.projectsArray = projectsArray;
   }
@@ -28,3 +28,7 @@ export default class AppStateManager {
     return Array.isArray(loadedProjects) ? loadedProjects : [];
   }
 }
+
+const appStateManager = new AppStateManager([]);
+//You only need ONE instance of appStateManager hence exporting it and not the class as a whole
+export default appStateManager;
