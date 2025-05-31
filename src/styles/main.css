@@ -41,3 +41,9 @@
 .priority-low {
   color: green;
 }
+
+.to-do-list-dialog-box {
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
