@@ -1,10 +1,10 @@
 module.exports = {
   root: true,
   extends: [
-    "airbnb-base",
-    "plugin:prettier/recommended", // enables plugin + config
+    'airbnb-base',
+    'plugin:prettier/recommended', // enables plugin + config
   ],
-  plugins: ["prettier"],
+  plugins: ['prettier'],
   env: {
     browser: true,
     node: true,
@@ -12,17 +12,17 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
   rules: {
     // Run Prettier as an ESLint rule (shows as error)
-    "prettier/prettier": "error",
+    'prettier/prettier': 'error',
 
     // Airbnb overrides (optional but common)
-    "no-console": "warn",
-    "no-underscore-dangle": "off",
-    "func-names": "off",
-    "import/extensions": "off",
-    "no-plusplus": "off",
+    'no-console': 'warn',
+    'no-underscore-dangle': 'off',
+    'func-names': 'off',
+    'import/extensions': 'off',
+    'no-plusplus': 'off',
   },
 };
