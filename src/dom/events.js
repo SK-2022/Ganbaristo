@@ -58,7 +58,7 @@ function handleCreateTodoClick(event) {
   prioritySelect.selectedIndex = 0;
 }
 
-export function initEventListeners() {
+export default function initEventListeners() {
   if (createTodoButton) {
     createTodoButton.addEventListener('click', handleCreateTodoClick);
   }
