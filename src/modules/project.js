@@ -1,4 +1,4 @@
-//REMEMBER SOLID PRINCIPLES
+// REMEMBER SOLID PRINCIPLES
 
 export default class Project {
   constructor(name, todosArray) {
@@ -16,13 +16,13 @@ export default class Project {
     this.todosArray.splice(index, 1);
   }
 
-  //Filters the todosArray for todos that aren't completed
+  // Filters the todosArray for todos that aren't completed
   retrieveActiveToDos() {
     const activeTodos = this.todosArray.filter((todo) => !todo.completed);
     return activeTodos;
   }
 
-  //Filters the todosArray for todos that are completed.
+  // Filters the todosArray for todos that are completed.
   retrieveCompletedToDos() {
     const completedTodos = this.todosArray.filter((todo) => todo.completed);
     return completedTodos;
