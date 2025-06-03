@@ -1,12 +1,12 @@
 // App entry point
-import '/src/styles/main.css';
+import '/src/styles/main.css'; //Don't use an absolute path.Figure out how to use a relative or an alternative path
 import ToDo from './modules/todo.js';
 import Project from './modules/project.js';
 import appStateManager from './modules/appState.js';
 import { prioritySelectionsArray } from './modules/todo.js';
 import ChecklistItem from './modules/checklist.js';
 import { renderProjectList, renderTodosList } from './dom/render.js';
-import { initEventListeners } from './dom/events.js';
+import initEventListeners from './dom/events.js';
 // import { renderChecklistItems } from './dom/render.js';
 
 // Create initial todo list test item
