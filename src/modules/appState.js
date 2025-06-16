@@ -1,4 +1,5 @@
 // This is a central place to store all projects and handle app-wide actions like adding/deleting a project or saving to localStorage.
+import Project from './project.js';
 
 class AppStateManager {
   constructor(projectsArray) {
@@ -22,10 +23,12 @@ class AppStateManager {
     localStorage.setItem('projects', JSON.stringify(this.projectsArray));
   }
 
-  // Retrieve the projects array from localStorage, always return an array
+  // Retrieve the projects array from localStorage, always return an array. Also return the projects array in the form of a real object thats usable, hence the use of mapping.
   getProjectsArray() {
     const loadedProjects = JSON.parse(localStorage.getItem('projects'));
-    this.projectsArray = Array.isArray(loadedProjects) ? loadedProjects : [];
+    this.projectsArray = Array.isArray(loadedProjects)
+      ? loadedProjects.map((proj) => new Project(proj.name, proj.todosArray))
+      : [];
     return this.projectsArray;
   }
 }
