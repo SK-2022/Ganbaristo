@@ -59,6 +59,13 @@ function handleCreateTodoClick(event) {
   prioritySelect.selectedIndex = 0;
 }
 
+// Make sure this selects the array of todo.
+function handleCompletingTodoClick(todo) {
+  // Select the buttons you want to have this function attached to.
+  // On click, change the todo.completed boolean to true with the toggle function.
+  todo.toggleCompletion();
+}
+
 export default function initEventListeners() {
   if (createTodoButton) {
     createTodoButton.addEventListener('click', handleCreateTodoClick);
@@ -68,4 +75,10 @@ export default function initEventListeners() {
   if (projectList) {
     projectList.addEventListener('click', handleSelectCurrentProjectClick);
   }
+  // Attach event listener to all completion buttons:
+  const todosList = document.querySelectorAll('.checklist');
+  todosList.forEach((completionButton) => {
+    completionButton.addEventListener('click', handleCompletingTodoClick);
+  });
+
 }
