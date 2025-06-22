@@ -9,6 +9,7 @@ const todoTitle = document.querySelector('.to-do-list-title-input');
 const todoDescription = document.querySelector('.to-do-list-description-input');
 const dateInput = document.querySelector('.to-do-list-date-input');
 const prioritySelect = document.querySelector('.to-do-list-priority-input');
+// const doneButton = document.querySelector('.')
 
 // Current Project selection logic
 let currentProject = null;
