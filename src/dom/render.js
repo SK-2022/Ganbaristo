@@ -67,17 +67,17 @@ export function renderTodosList(todosArray) {
     todoListContainer.classList.add('to-do-list-container');
 
     // Create the checklist button for each to do item. Change to COMPLETION button later
-    const checklistButton = document.createElement('button');
-    checklistButton.classList.add('checklist-button');
-    checklistButton.textContent = 'done';
+    const doneButton = document.createElement('button');
+    doneButton.classList.add('done-button');
+    doneButton.textContent = 'done';
 
     // Set a custom attribute or class based on completion
     // If the todo.completed is true.
     if (todo.completed) {
-      checklistButton.setAttribute('data-completed', 'true');
+      doneButton.setAttribute('data-completed', 'true');
       todoListContainer.classList.add('completed');
     } else {
-      checklistButton.setAttribute('data-completed', 'false');
+      doneButton.setAttribute('data-completed', 'false');
       todoListContainer.classList.remove('completed');
     }
 
@@ -115,7 +115,7 @@ export function renderTodosList(todosArray) {
     }
 
     // Add the checklist button and title to the todo container, then append it to the parent container
-    todoListContainer.appendChild(checklistButton);
+    todoListContainer.appendChild(doneButton);
     todoListContainer.appendChild(todoTitleDiv);
     todoListContainer.appendChild(todoDescription);
 
