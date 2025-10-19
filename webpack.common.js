@@ -1,37 +1,52 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "production", //THIS CAN BE CHANGED TO DEV MODE TOO. PRODUCTION MODE OFFERS MORE "OPTIMIZATIONS" FOR DEPLOYMENT
-  entry: "./src/index.js",
+  mode: 'production', // THIS CAN BE CHANGED TO DEV MODE TOO. PRODUCTION MODE OFFERS MORE "OPTIMIZATIONS" FOR DEPLOYMENT
+  entry: './src/index.js',
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devtool: "eval-source-map",
+  devtool: 'eval-source-map',
   devServer: {
-    watchFiles: ["./src/templates/template.html"],
+    watchFiles: ['./src/templates/template.html'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/templates/template.html", //CHECK HERE FOR THE TEMPLATE FILE
+      template: './src/templates/template.html', // CHECK HERE FOR THE TEMPLATE FILE
     }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
+  // This allows the plugins to be kept here instead of being moved to devDependencies.
+  overrides: [
+    {
+      files: [
+        'webpack.*.js',
+        'webpack.config.js',
+        'webpack.common.js',
+        'webpack.dev.js',
+        'webpack.prod.js',
+      ],
+      rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
+    },
+  ],
 };
