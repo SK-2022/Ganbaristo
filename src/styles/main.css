@@ -23,6 +23,7 @@
 
 .to-do-list-container {
   display: flex;
+  gap: 10px;
 }
 
 .completed {

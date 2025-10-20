@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-named-as-default
 import ToDo from '../modules/todo.js';
-import { renderTodosList } from './render.js';
+import { renderTodosList, renderProjectTitle } from './render.js';
 import appStateManager from '../modules/appState.js';
 
 // Select all the necessary buttons and inputs
@@ -29,6 +29,8 @@ function handleSelectCurrentProjectClick(event) {
   }
   currentProject = project;
   renderTodosList(currentProject.todosArray);
+  // Displays correct project title
+  renderProjectTitle(currentProject.name);
 }
 
 function handleCreateTodoClick(event) {
@@ -80,5 +82,4 @@ export default function initEventListeners() {
   todosList.forEach((completionButton) => {
     completionButton.addEventListener('click', handleCompletingTodoClick);
   });
-
 }
