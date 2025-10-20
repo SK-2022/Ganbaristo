@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>To Do List</title>
+    <title>Ganbaristo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles/main.css" />
@@ -44,17 +44,16 @@
         <button class="settings-button">settings and view</button>
       </div>
       <div class="todays-tasks-div">
-        <div class="today-title">Today</div>
+        <div class="project-title">Default Title</div>
         <div class="task-quantifier">
-          You have 100 tasks to do today. Good luck!
+          You have # tasks today.
         </div>
       </div>
-      <div>My Ganbaristo</div>
       <!-- TO DO LIST CONTAINER -->
       <div class="to-do-list-parent-container">
         <!-- Users should only see the title of the to do list item and be able to see all properties once they click on the item. -->
         <div class="to-do-list-container">
-          <button class="checklist-button">a</button>
+          <button class="done-button">a</button>
           <div class="to-do-title">Do it 1</div>
           <div class="to-do-description"></div>
           <div class="date-and-priority-container">
@@ -84,6 +83,14 @@
           </select>
           <button type="submit" class="create-todo-button">Create todo</button>
         </div>
+      </form>
+      <!-- PROJECT ADDITION FORM -->
+      <form class="project-addition-dialog-box">
+        <div class="project-addition-dialog-box-text">Enter your new project title</div>
+        <div class="project-title-input-container">
+          <input type="text" class="project-title-input" name="title" placeholder="What's my name?">
+        </div>
+        <button type="submit" class="create-todo-button">Add project</button>
       </form>
     </main>
   </body>

@@ -1,12 +1,11 @@
 // App entry point
-import '/src/styles/main.css';
-import ToDo from './modules/todo.js';
+import './styles/main.css';
+import ToDo, { prioritySelectionsArray } from './modules/todo.js';
 import Project from './modules/project.js';
 import appStateManager from './modules/appState.js';
-import { prioritySelectionsArray } from './modules/todo.js';
 import ChecklistItem from './modules/checklist.js';
 import { renderProjectList, renderTodosList } from './dom/render.js';
-import { initEventListeners } from './dom/events.js';
+import initEventListeners from './dom/events.js';
 // import { renderChecklistItems } from './dom/render.js';
 
 // Create initial todo list test item
