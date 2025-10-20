@@ -12,6 +12,7 @@
   overflow: hidden;
 }
 
+/* SIDE BAR STYLING */
 .side-bar {
   width: 250px;
   height: 100vh;
@@ -19,8 +20,10 @@
   left: 0;
   top: 0;
   padding: 20px;
+  margin-right: 10px;
 }
 
+/* TO DO LIST CONTAINER STYLING */
 .to-do-list-container {
   display: flex;
   gap: 10px;
@@ -44,8 +47,18 @@
   color: blue;
 }
 
-.to-do-list-dialog-box {
+/* ADD TO DO LIST DIALOG BOX */
+.to-do-list-dialog-box, .project-addition-dialog-box {
   border: solid 1px #ccc;
   border-radius: 5px;
   padding: 20px;
+}
+
+/* ADD PROJECT DIALOG BOX */
+
+.project-addition-dialog-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
 }

@@ -10,6 +10,7 @@ const todoDescription = document.querySelector('.to-do-list-description-input');
 const dateInput = document.querySelector('.to-do-list-date-input');
 const prioritySelect = document.querySelector('.to-do-list-priority-input');
 // const doneButton = document.querySelector('.')
+const addProjectButton = document.querySelector('.add-project-button');
 
 // Current Project selection logic
 let currentProject = null;
@@ -66,6 +67,12 @@ function handleCompletingTodoClick(todo) {
   // Select the buttons you want to have this function attached to.
   // On click, change the todo.completed boolean to true with the toggle function.
   todo.toggleCompletion();
+}
+
+function openProjectAdditionInput(event) {
+  event.preventDefault();
+  // Open a SMALL pretty dialogue box to add the name of the project.
+
 }
 
 export default function initEventListeners() {
