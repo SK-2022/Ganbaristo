@@ -21,10 +21,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
         test: /\.html$/i,
         loader: 'html-loader',
       },
@@ -32,9 +28,13 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
-  // This allows the plugins to be kept here instead of being moved to devDependencies.
+  // This allows the plugins to be kept here instead of being moved to devDependencies. Is this even needed?
   overrides: [
     {
       files: [
