@@ -34,19 +34,4 @@ module.exports = {
       },
     ],
   },
-  // This allows the plugins to be kept here instead of being moved to devDependencies. Is this even needed?
-  overrides: [
-    {
-      files: [
-        'webpack.*.js',
-        'webpack.config.js',
-        'webpack.common.js',
-        'webpack.dev.js',
-        'webpack.prod.js',
-      ],
-      rules: {
-        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-      },
-    },
-  ],
 };
