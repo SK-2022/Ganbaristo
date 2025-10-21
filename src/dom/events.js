@@ -11,6 +11,7 @@ const todoDescription = document.querySelector('.to-do-list-description-input');
 const dateInput = document.querySelector('.to-do-list-date-input');
 const prioritySelect = document.querySelector('.to-do-list-priority-input');
 const addProjectButton = document.querySelector('.add-project-button');
+const projectNameSubmissionBtn = document.querySelector('.project-name-submission-btn');
 // const doneButton = document.querySelector('.')
 
 // Select all the necessary buttons and inputs related to project addition
@@ -83,13 +84,19 @@ function handleCompletingTodoClick(todo) {
 function handleAddProjectClick(event) {
   event.preventDefault();
 
-  // Get value from the input
+  // Get project name value from the input
   const projectTitle = newProjectTitleInput.value;
+  if (!projectTitle) {
+    alert('Please input a project title.');
+    return;
+  }
 
   // Create a new project and add it to the appStateManager. Also render the project list again to reflect the change. FIND OUT WHY PROJECTS ARE NOT BEING ADDED UPON THE CLICK
   const newProject = new Project(projectTitle, []);
   appStateManager.addToProjectsArray(newProject);
+  console.log(appStateManager);
   renderProjectList(appStateManager.projectsArray);
+  newProjectTitleInput.value = '';
 }
 
 // Add the event listeners to their respective locations
@@ -109,7 +116,7 @@ export default function initEventListeners() {
   });
 
   // Attach the event listener to the Add project button
-  if (addProjectButton) {
-    addProjectButton.addEventListener('click', handleAddProjectClick);
+  if (projectNameSubmissionBtn) {
+    projectNameSubmissionBtn.addEventListener('click', handleAddProjectClick);
   }
 }
