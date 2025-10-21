@@ -45,3 +45,4 @@ renderProjectList(appStateManager.projectsArray);
 renderTodosList(theOdinProject.todosArray);
 
 initEventListeners();
+console.log(appStateManager.projectsArray);
