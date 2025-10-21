@@ -137,3 +137,47 @@ export function renderProjectTitle(projectName) {
     projectTitleDiv.textContent = projectName;
   }
 }
+
+// Renders the project name input dialog box
+
+export function renderProjectAdditionDialogBox() {
+  // <form class="project-addition-dialog-box">
+  //       <div class="project-addition-dialog-box-text">Enter your new project title</div>
+  //       <div class="project-title-input-container">
+  //         <input type="text" class="project-title-input" name="title" placeholder="What's my name?">
+  //       </div>
+  //       <button type="submit" class="project-name-submission-btn">Add project</button>
+  //     </form>
+  // Create the dialog box form
+  const projectAdditionForm = document.createElement('form');
+  projectAdditionForm.classList.add('project-addition-dialog');
+
+  // Create the dialogue box text  div and insert text
+  const projectAdditionDialogBoxTextDiv = document.createElement('div');
+  projectAdditionDialogBoxTextDiv.classList.add('project-addition-dialog-box-text');
+  projectAdditionDialogBoxTextDiv.textContent = 'Enter your new project title';
+
+  // Create the project title container
+  const projectTitleContainer = document.createElement('div');
+  projectTitleContainer.classList.add('project-title-input-container');
+
+  // Create input for project name
+  const projectNameInput = document.createElement('input');
+  projectNameInput.classList.add('project-title-input');
+  projectNameInput.type = 'text';
+  projectNameInput.name = 'title';
+  projectNameInput.placeholder = 'My New Project';
+
+  // Create button for adding the project name
+  const projectSubmissionBtn = document.createElement('button');
+  projectSubmissionBtn.classList.add('project-name-submission-btn');
+  projectSubmissionBtn.type = 'submit';
+  projectSubmissionBtn.textContent = 'Add project';
+
+  // Append elements to their relevant containers
+  projectAdditionForm.appendChild(projectAdditionDialogBoxTextDiv);
+  projectAdditionForm.appendChild(projectTitleContainer);
+  projectAdditionForm.appendChild(projectSubmissionBtn);
+
+  projectTitleContainer.appendChild(projectNameInput);
+}
