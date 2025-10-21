@@ -1,6 +1,11 @@
 // eslint-disable-next-line import/no-named-as-default
 import ToDo from '../modules/todo.js';
-import { renderTodosList, renderProjectTitle, renderProjectList } from './render.js';
+import {
+  renderTodosList,
+  renderProjectTitle,
+  renderProjectList,
+  renderProjectAdditionDialogBox,
+} from './render.js';
 import appStateManager from '../modules/appState.js';
 import Project from '../modules/project.js';
 
@@ -11,11 +16,7 @@ const todoDescription = document.querySelector('.to-do-list-description-input');
 const dateInput = document.querySelector('.to-do-list-date-input');
 const prioritySelect = document.querySelector('.to-do-list-priority-input');
 const addProjectButton = document.querySelector('.add-project-button');
-const projectNameSubmissionBtn = document.querySelector('.project-name-submission-btn');
 // const doneButton = document.querySelector('.')
-
-// Select all the necessary buttons and inputs related to project addition
-const newProjectTitleInput = document.querySelector('.project-title-input');
 
 // Current Project selection logic
 let currentProject = null;
@@ -83,7 +84,7 @@ function handleCompletingTodoClick(todo) {
 // Handles the creation of a new project
 function handleAddProjectClick(event) {
   event.preventDefault();
-
+  const newProjectTitleInput = document.querySelector('.project-title-input');
   // Get project name value from the input
   const projectTitle = newProjectTitleInput.value;
   if (!projectTitle) {
@@ -91,10 +92,12 @@ function handleAddProjectClick(event) {
     return;
   }
 
-  // Create a new project and add it to the appStateManager. Also render the project list again to reflect the change. FIND OUT WHY PROJECTS ARE NOT BEING ADDED UPON THE CLICK
+  // Create a new project and add it to the appStateManager. Also render the project list again to reflect the change.
   const newProject = new Project(projectTitle, []);
   appStateManager.addToProjectsArray(newProject);
+
   console.log(appStateManager);
+
   renderProjectList(appStateManager.projectsArray);
   newProjectTitleInput.value = '';
 }
@@ -115,8 +118,20 @@ export default function initEventListeners() {
     completionButton.addEventListener('click', handleCompletingTodoClick);
   });
 
-  // Attach the event listener to the Add project button
-  if (projectNameSubmissionBtn) {
-    projectNameSubmissionBtn.addEventListener('click', handleAddProjectClick);
+  if (addProjectButton) {
+    addProjectButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      renderProjectAdditionDialogBox(); // Build the dialog markup first
+
+      const projectAdditionDialogBox = document.querySelector('.project-addition-dialog-box');
+      if (!projectAdditionDialogBox) return; // Bail out if for some reason the form didn't render.
+
+      // Select all the necessary buttons and inputs related to project addition
+      const projectNameSubmissionBtn = document.querySelector('.project-name-submission-btn');
+      if (!projectNameSubmissionBtn) return; // Ensures the button is selected only if its rendered
+
+      // Attach the event listener to the Add project button
+      projectNameSubmissionBtn.addEventListener('click', handleAddProjectClick, { once: true }); // Hook up the submit action, but only ONCE to avoid duplicate listeners.
+    });
   }
 }

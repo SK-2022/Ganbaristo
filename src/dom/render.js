@@ -141,16 +141,10 @@ export function renderProjectTitle(projectName) {
 // Renders the project name input dialog box
 
 export function renderProjectAdditionDialogBox() {
-  // <form class="project-addition-dialog-box">
-  //       <div class="project-addition-dialog-box-text">Enter your new project title</div>
-  //       <div class="project-title-input-container">
-  //         <input type="text" class="project-title-input" name="title" placeholder="What's my name?">
-  //       </div>
-  //       <button type="submit" class="project-name-submission-btn">Add project</button>
-  //     </form>
   // Create the dialog box form
-  const projectAdditionForm = document.createElement('form');
-  projectAdditionForm.classList.add('project-addition-dialog');
+  const projectAdditionForm = document.querySelector('.project-addition-dialog-box');
+  // Clears the form everytime to prevent duplicates
+  projectAdditionForm.textContent = '';
 
   // Create the dialogue box text  div and insert text
   const projectAdditionDialogBoxTextDiv = document.createElement('div');
