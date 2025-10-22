@@ -37,7 +37,7 @@ export function renderTodosList(todosArray) {
     const todoListContainer = document.createElement('div');
     todoListContainer.classList.add('to-do-list-container');
 
-    // Create the checklist button for each to do item. Change to COMPLETION button later
+    // Create the completion button for each to do item.
     const doneButton = document.createElement('button');
     doneButton.classList.add('done-button');
     doneButton.textContent = 'done';

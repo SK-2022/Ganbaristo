@@ -106,19 +106,17 @@ function handleAddProjectClick(event) {
 
 // Add the event listeners to their respective locations
 export default function initEventListeners() {
+  // Create the to do and add the done button functionality after the to do has been rendered. FIX LATER
   if (createTodoButton) {
     createTodoButton.addEventListener('click', handleCreateTodoClick);
   }
+
   // Attach the event listener to the parent UL for delegation:
   const projectList = document.querySelector('.project-list');
   if (projectList) {
     projectList.addEventListener('click', handleSelectCurrentProjectClick);
   }
-  // Attach event listener to all completion buttons:
-  const todosList = document.querySelectorAll('.checklist');
-  todosList.forEach((completionButton) => {
-    completionButton.addEventListener('click', handleCompletingTodoClick);
-  });
+  // Attach event listener to all 'done' buttons:
 
   if (addProjectButton) {
     addProjectButton.addEventListener('click', (event) => {
