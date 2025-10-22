@@ -8,13 +8,12 @@ export default class ToDo {
   // The constructor initializes the properties of the ToDo object
   static nextId = 1;
 
-  constructor(title, description, dueDate, priority, checklist, completed) {
+  constructor(title, description, dueDate, priority, completed) {
     this.id = ToDo.nextId++;
     this.title = title;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    this.checklist = checklist;
     this.completed = completed;
   }
 
@@ -35,16 +34,7 @@ export default class ToDo {
   isCompleted() {
     return this.completed;
   }
-
-  //Adds an item to the checklist array
-  addChecklistItem(checklistItem) {
-    this.checklist.push(checklistItem);
-  }
-  //Removes an item at the specified index in the checklist array
-  removeChecklistItem(index) {
-    this.checklist.splice(index, 1);
-  }
-
+  
   //Format the date for the due date of the to do list item.
   formatDate() {
     return format(new Date(this.dueDate), "PPPP");

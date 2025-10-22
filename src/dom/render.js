@@ -26,35 +26,6 @@ export function renderProjectList(projectsArray) {
   });
 }
 
-// Render the checklist items for each respective todo.
-export function renderChecklistItems(checklist) {
-  const ul = document.createElement('ul');
-  ul.classList.add('checklist');
-
-  checklist.forEach((item) => {
-    const li = document.createElement('li');
-    li.classList.add('checklist-item');
-
-    // Optionally, use a checkbox to show completion
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = item.done;
-
-    const label = document.createElement('span');
-    label.textContent = item.title;
-
-    if (item.done) {
-      li.classList.add('done');
-    }
-
-    li.appendChild(checkbox);
-    li.appendChild(label);
-    ul.appendChild(li);
-  });
-
-  return ul;
-}
-
 // Go through todos array and display them in the
 export function renderTodosList(todosArray) {
   // Clear the current list to avoid duplicates
@@ -122,9 +93,6 @@ export function renderTodosList(todosArray) {
     todoListContainer.appendChild(dateAndPriorityContainer);
     dateAndPriorityContainer.appendChild(todoDate);
     dateAndPriorityContainer.appendChild(todoPriority);
-
-    const checklistUl = renderChecklistItems(todo.checklist);
-    todoListContainer.appendChild(checklistUl);
 
     todosListParentContainer.appendChild(todoListContainer);
   });

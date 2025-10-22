@@ -52,7 +52,7 @@ function handleCreateTodoClick(event) {
   const priority = selectedOption.value;
 
   // Create a new ToDo object (empty checklist, not completed)
-  const newTodo = new ToDo(title, description, dueDate, priority, [], false);
+  const newTodo = new ToDo(title, description, dueDate, priority, false);
 
   // Assign the todo to the correct project
   if (currentProject) {
