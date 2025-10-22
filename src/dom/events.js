@@ -96,10 +96,12 @@ function handleAddProjectClick(event) {
   const newProject = new Project(projectTitle, []);
   appStateManager.addToProjectsArray(newProject);
 
-  console.log(appStateManager);
-
+  // Renders the project list again on the side bar
   renderProjectList(appStateManager.projectsArray);
   newProjectTitleInput.value = '';
+  // Reset the dialog box after addition
+  const projectAdditionDialogBox = document.querySelector('.project-addition-dialog-box');
+  projectAdditionDialogBox.textContent = '';
 }
 
 // Add the event listeners to their respective locations
