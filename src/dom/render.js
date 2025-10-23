@@ -42,14 +42,23 @@ export function renderTodosList(todosArray) {
     doneButton.classList.add('done-button');
     doneButton.textContent = 'done';
 
-    // Add attribute for access to the specific todo at a specific index as set by the parameter
-    doneButton.setAttribute('data-index', index);
-
     // Wire up toggle behaviour for the completion button. Remember, you have access to each todo object within this loop. Thats why this works.
     doneButton.addEventListener('click', () => {
       todo.toggleCompletion();
       doneButton.setAttribute('data-completed', todo.completed ? 'true' : 'false');
       todoListContainer.classList.toggle('completed', todo.completed);
+    });
+
+    // Create the delete button
+    const todoDeleteButton = document.createElement('button');
+    todoDeleteButton.classList.add('todo-delete-button');
+    todoDeleteButton.textContent = 'delete';
+
+    // Wire up click behavior for deletion.
+    todoDeleteButton.addEventListener('click', () => {
+      // Removes the todo object from the todosarray and erases the HTML
+      todosArray.splice(index, 1);
+      todoListContainer.innerHTML = '';
     });
 
     // Set a custom attribute or class based on completion
@@ -103,6 +112,8 @@ export function renderTodosList(todosArray) {
     todoListContainer.appendChild(dateAndPriorityContainer);
     dateAndPriorityContainer.appendChild(todoDate);
     dateAndPriorityContainer.appendChild(todoPriority);
+
+    todoListContainer.appendChild(todoDeleteButton);
 
     todosListParentContainer.appendChild(todoListContainer);
   });
