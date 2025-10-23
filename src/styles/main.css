@@ -29,6 +29,7 @@
   gap: 10px;
 }
 
+/* Hide Completed Tasks */
 .completed {
   display: none;
 }

@@ -69,13 +69,6 @@ function handleCreateTodoClick(event) {
   prioritySelect.selectedIndex = 0;
 }
 
-// Make sure this selects the array of todo.
-function handleCompletingTodoClick(todo) {
-  // Select the buttons you want to have this function attached to.
-  // On click, change the todo.completed boolean to true with the toggle function.
-  todo.toggleCompletion();
-}
-
 // Open a SMALL pretty dialogue box to add the name of the project.
 // function openProjectAdditionInput(event) {
 //   event.preventDefault();

@@ -32,7 +32,7 @@ export function renderTodosList(todosArray) {
   todosListParentContainer.innerHTML = '';
 
   // Loop through each to do and create a div for it
-  todosArray.forEach((todo) => {
+  todosArray.forEach((todo, index) => {
     // Create the todo item container
     const todoListContainer = document.createElement('div');
     todoListContainer.classList.add('to-do-list-container');
@@ -41,6 +41,16 @@ export function renderTodosList(todosArray) {
     const doneButton = document.createElement('button');
     doneButton.classList.add('done-button');
     doneButton.textContent = 'done';
+
+    // Add attribute for access to the specific todo at a specific index as set by the parameter
+    doneButton.setAttribute('data-index', index);
+
+    // Wire up toggle behaviour for the completion button. Remember, you have access to each todo object within this loop. Thats why this works.
+    doneButton.addEventListener('click', () => {
+      todo.toggleCompletion();
+      doneButton.setAttribute('data-completed', todo.completed ? 'true' : 'false');
+      todoListContainer.classList.toggle('completed', todo.completed);
+    });
 
     // Set a custom attribute or class based on completion
     // If the todo.completed is true.
