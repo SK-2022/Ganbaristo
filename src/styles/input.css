@@ -1,15 +1,5 @@
 @import "tailwindcss";
 
-@theme{
-  /*  */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .content {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
@@ -19,7 +9,7 @@
 }
 
 /* SIDE BAR STYLING */
-.side-bar {
+/* .side-bar {
   width: 250px;
   height: 100vh;
   background-color: #f0f0f0;
@@ -27,7 +17,7 @@
   top: 0;
   padding: 20px;
   margin-right: 10px;
-}
+} */
 
 /* TO DO LIST CONTAINER STYLING */
 .to-do-list-container {
