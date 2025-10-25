@@ -12,13 +12,8 @@ const theFitnessProject = new Project('The Fitness Project', []);
 appStateManager.addToProjectsArray(theOdinProject);
 appStateManager.addToProjectsArray(theFitnessProject);
 // Load from localStorage when the app starts. Console.log() first. Add DOM elements later
-console.log(appStateManager.getProjectsArray());
-
-console.log(theOdinProject);
-console.log(appStateManager.getProjectsArray());
 
 renderProjectList(appStateManager.projectsArray);
 renderTodosList(theOdinProject.todosArray);
 
 initEventListeners();
-console.log(appStateManager.projectsArray);
