@@ -1,5 +1,5 @@
 // App entry point
-import './styles/main.css';
+import './styles/output.css';
 import Project from './modules/project.js';
 import appStateManager from './modules/appState.js';
 import { renderProjectList, renderTodosList } from './dom/render.js';
