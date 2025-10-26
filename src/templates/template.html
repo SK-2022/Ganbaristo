@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
@@ -7,14 +7,21 @@
     <title>Ganbaristo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="../styles/output.css" rel="stylesheet"  />
+    <link rel="icon" href="../assets/icons/to-do-list-favicon.png" type="image/png" />
+    <link href="../styles/output.css" rel="stylesheet" />
   </head>
 
   <body class="content">
     <!-- SIDE BAR -->
     <section class="side-bar flex flex-col p-5 bg-amber-100 w-1/9">
-      <div class="profile-picture-container">
-        <img src="#" alt="your profile picture" />
+      <div class="profile-picture-parent-container flex">
+        <div class="h-22 w-22">
+          <img
+            class="h-2 w-2 rounded-xl"
+            src="../assets/images/profile-pic-placeholder-2.png"
+            alt="your profile picture"
+          />
+        </div>
         <button class="notification-bell">bell</button>
         <button class="side-bar-button">close</button>
       </div>
@@ -40,13 +47,23 @@
         <!-- Users should only see the title of the to do list item and be able to see all properties once they click on the item. -->
       </div>
       <!-- TO DO LIST INPUT FORM -->
-       <!-- Add subtasks input area LATER -->
+      <!-- Add subtasks input area LATER -->
       <form class="to-do-list-dialog-box">
         <div class="to-do-list-title-input-container">
-          <input type="text" class="to-do-list-title-input" name="title" placeholder="Enter title">
+          <input
+            type="text"
+            class="to-do-list-title-input"
+            name="title"
+            placeholder="Enter title"
+          />
         </div>
         <div class="to-do-list-description-input-container">
-          <input type="text" class="to-do-list-description-input" name="description" placeholder="Enter description" />
+          <input
+            type="text"
+            class="to-do-list-description-input"
+            name="description"
+            placeholder="Enter description"
+          />
         </div>
         <div class="date-priority-input-and-confirm-container">
           <input type="date" name="date" class="to-do-list-date-input" />
@@ -59,8 +76,7 @@
         </div>
       </form>
       <!-- PROJECT ADDITION FORM -->
-      <form class="project-addition-dialog-box">
-      </form>
+      <form class="project-addition-dialog-box"></form>
     </main>
   </body>
 </html>
