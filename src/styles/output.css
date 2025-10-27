@@ -225,20 +225,8 @@
   .items-center {
     align-items: center;
   }
-  .items-end {
-    align-items: flex-end;
-  }
-  .justify-around {
-    justify-content: space-around;
-  }
   .justify-center {
     justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
-  }
-  .justify-evenly {
-    justify-content: space-evenly;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -249,6 +237,28 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .border-r-\[\#\#F5F5F5\] {
+    border-right-color: ##F5F5F5;
+  }
+  .border-r-\[\#9e6b6b\] {
+    border-right-color: #9e6b6b;
+  }
+  .border-r-\[\#520707\] {
+    border-right-color: #520707;
+  }
+  .border-r-\[\#522424\] {
+    border-right-color: #522424;
+  }
+  .border-r-\[\#F5F5F5\] {
+    border-right-color: #F5F5F5;
+  }
+  .border-r-\[\#db0f0f\] {
+    border-right-color: #db0f0f;
   }
   .bg-\[\#155DFC\] {
     background-color: #155DFC;
