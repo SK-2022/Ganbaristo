@@ -35,7 +35,7 @@
 }
 
 /* ADD TO DO LIST DIALOG BOX */
-.to-do-list-dialog-box, .project-addition-dialog-box {
+.to-do-list-dialog-box {
   border: solid 1px #ccc;
   border-radius: 5px;
   padding: 20px;

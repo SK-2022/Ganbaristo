@@ -238,27 +238,41 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-3 {
+    border-style: var(--tw-border-style);
+    border-width: 3px;
+  }
   .border-solid {
     --tw-border-style: solid;
     border-style: solid;
   }
-  .border-r-\[\#\#F5F5F5\] {
-    border-right-color: ##F5F5F5;
+  .border-\[\#F5F5F5\] {
+    border-color: #F5F5F5;
   }
-  .border-r-\[\#9e6b6b\] {
-    border-right-color: #9e6b6b;
+  .border-\[\#ddc1c1\] {
+    border-color: #ddc1c1;
   }
-  .border-r-\[\#520707\] {
-    border-right-color: #520707;
+  .border-\[\#dddcdc\] {
+    border-color: #dddcdc;
   }
-  .border-r-\[\#522424\] {
-    border-right-color: #522424;
+  .border-\[\#e7e7e7\] {
+    border-color: #e7e7e7;
+  }
+  .border-r-\[\#241111\] {
+    border-right-color: #241111;
   }
   .border-r-\[\#F5F5F5\] {
     border-right-color: #F5F5F5;
   }
-  .border-r-\[\#db0f0f\] {
-    border-right-color: #db0f0f;
+  .border-r-\[\#beacac\] {
+    border-right-color: #beacac;
+  }
+  .border-r-\[\#ddc1c1\] {
+    border-right-color: #ddc1c1;
   }
   .bg-\[\#155DFC\] {
     background-color: #155DFC;
@@ -284,6 +298,9 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-\[\#130a0a\] {
+    color: #130a0a;
   }
   .text-\[\#FFFFFF\] {
     color: #FFFFFF;
@@ -319,7 +336,7 @@
 .priority-low {
   color: blue;
 }
-.to-do-list-dialog-box, .project-addition-dialog-box {
+.to-do-list-dialog-box {
   border: solid 1px #ccc;
   border-radius: 5px;
   padding: 20px;
