@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .content {
-  font-family: Arial, sans-serif;
+  font-family: 'roboto', 'sans-serif';
   background-color: #ffffff;
   display: flex;
   height: 100vh;
