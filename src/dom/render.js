@@ -3,7 +3,6 @@ const projectList = document.querySelector('.project-list');
 const todosListParentContainer = document.querySelector('.to-do-list-parent-container');
 
 // Go through the projects array and display them in the .project-list element.
-
 export function renderProjectList(projectsArray) {
   // Clear the current list to avoid duplicates
   projectList.innerHTML = '';
@@ -11,7 +10,7 @@ export function renderProjectList(projectsArray) {
   // Loop through each project and create a list item
   projectsArray.forEach((project, index) => {
     const li = document.createElement('li');
-    li.classList.add('project-list-item');
+    li.classList.add('project-list-item', 'hover:bg-[#F5F5F5]', 'p-3', 'rounded-md');
     // Add attribute for access to the index as set by the parameter
     li.setAttribute('data-index', index); //
 
