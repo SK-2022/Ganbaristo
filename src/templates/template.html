@@ -34,9 +34,9 @@
       </div>
       <span class="flex justify-center mt-auto"><button class="add-project-button text rounded-full bg-[#FFFFFF] border-solid border border-[#d6d6d6] p-2 text-[#130a0a] hover:bg-[#F5F5F5]">Add New Project</button></span>
     </section>
-    <main class="main-content-container bg-[#FAFAFA] w-8/9 h-screen flex flex-col items-center pt-2">
+    <main class="main-content-container bg-[#FAFAFA] w-8/9 flex flex-col items-center pt-20">
       <div class="todays-tasks-div">
-        <div class="project-title">Default Title</div>
+        <div class="project-title underline pb-5 text-xl">No project selected</div>
       </div>
       <!-- TO DO LIST CONTAINER -->
       <div class="to-do-list-parent-container">
@@ -44,11 +44,11 @@
       </div>
       <!-- TO DO LIST INPUT FORM -->
       <!-- Add subtasks input area LATER -->
-      <form class="to-do-list-dialog-box">
+      <form class="to-do-list-dialog-box flex flex-col gap-3 bg-white rounded-2xl shadow-md p-6.">
         <div class="to-do-list-title-input-container">
           <input
             type="text"
-            class="to-do-list-title-input"
+            class="to-do-list-title-input bg-[#F3F3F5] rounded-md p-1"
             name="title"
             placeholder="Enter title"
           />
@@ -56,19 +56,19 @@
         <div class="to-do-list-description-input-container">
           <input
             type="text"
-            class="to-do-list-description-input"
+            class="to-do-list-description-input bg-[#F3F3F5] rounded-md p-1"
             name="description"
             placeholder="Enter description"
           />
         </div>
         <div class="date-priority-input-and-confirm-container">
-          <input type="date" name="date" class="to-do-list-date-input" />
-          <select name="priority" class="to-do-list-priority-input">
-            <option value="High" data-index="2">High</option>
-            <option value="Medium" data-index="1">Medium</option>
-            <option value="Low" data-index="0">Low</option>
+          <input type="date" name="date" class="to-do-list-date-input border-solid border border-[#e2e2e2] rounded-md p-1" />
+          <select name="priority" class="to-do-list-priority-input border-solid border border-[#e2e2e2] rounded-md p-1">
+            <option value="High" data-index="2" class="text-red-500">High</option>
+            <option value="Medium" data-index="1" class="text-yellow-500">Medium</option>
+            <option value="Low" data-index="0" class="text-blue-500">Low</option>
           </select>
-          <button type="submit" class="create-todo-button">Create todo</button>
+          <button type="submit" class="create-todo-button border-solid border border-[#e2e2e2] rounded-md p-0.5 bg-sky-500 hover:bg-sky-700 text-white">Create todo</button>
         </div>
       </form>
       <!-- PROJECT ADDITION FORM -->
