@@ -5,3 +5,6 @@ I use a to do list everyday and its about time I make one for myself.
 Create issues for future features you would like to add later
 
 1. Focus on creating an MVP first then add features later.
+
+
+2. Remember to focus on one aspect at a time.   
