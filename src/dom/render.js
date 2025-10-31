@@ -34,7 +34,16 @@ export function renderTodosList(todosArray) {
   todosArray.forEach((todo, index) => {
     // Create the todo item container
     const todoListContainer = document.createElement('div');
-    todoListContainer.classList.add('to-do-list-container');
+    todoListContainer.classList.add(
+      'to-do-list-container',
+      'flex',
+      'gap-5',
+      'bg-white',
+      'rounded-2xl',
+      'shadow-md',
+      'p-6',
+      'mb-4',
+    );
 
     // Create the completion button for each to do item.
     const doneButton = document.createElement('button');
@@ -82,12 +91,12 @@ export function renderTodosList(todosArray) {
 
     // Create the todo date and priority parent container
     const dateAndPriorityContainer = document.createElement('div');
-    dateAndPriorityContainer.classList.add('date-and-priority-container');
+    dateAndPriorityContainer.classList.add('date-and-priority-container', 'flex', 'gap-2');
 
     // Create the todo date container
     const todoDate = document.createElement('div');
     todoDate.classList.add('to-do-date');
-    todoDate.textContent = `Date: ${todo.dueDate}`;
+    todoDate.textContent = `Due Date: ${todo.dueDate}`;
 
     // Create the todo priority container
     const todoPriority = document.createElement('div');
