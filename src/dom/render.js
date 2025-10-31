@@ -140,6 +140,15 @@ export function renderProjectTitle(projectName) {
 export function renderProjectAdditionDialogBox() {
   // Create the dialog box form
   const projectAdditionForm = document.querySelector('.project-addition-dialog-box');
+  projectAdditionForm.classList.add(
+    'flex',
+    'gap-5',
+    'bg-white',
+    'rounded-2xl',
+    'shadow-md',
+    'p-6',
+    'mt-4',
+  );
   // Clears the form everytime to prevent duplicates
   projectAdditionForm.textContent = '';
 
@@ -154,14 +163,24 @@ export function renderProjectAdditionDialogBox() {
 
   // Create input for project name
   const projectNameInput = document.createElement('input');
-  projectNameInput.classList.add('project-title-input');
+  projectNameInput.classList.add('project-title-input', 'bg-[#F3F3F5]', 'rounded-md', 'p-1');
   projectNameInput.type = 'text';
   projectNameInput.name = 'title';
   projectNameInput.placeholder = 'My New Project';
 
   // Create button for adding the project name
   const projectSubmissionBtn = document.createElement('button');
-  projectSubmissionBtn.classList.add('project-name-submission-btn');
+  projectSubmissionBtn.classList.add(
+    'project-name-submission-btn',
+    'border-solid',
+    'border',
+    'border-[#e2e2e2]',
+    'rounded-md',
+    'p-0.5',
+    'bg-sky-500',
+    'hover:bg-sky-700',
+    'text-white',
+  );
   projectSubmissionBtn.type = 'submit';
   projectSubmissionBtn.textContent = 'Add project';
 
