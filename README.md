@@ -4,7 +4,20 @@ I use a to do list everyday and its about time I make one for myself.
 
 Create issues for future features you would like to add later
 
-1. Focus on creating an MVP first then add features later.
+MVP has been created:
+
+Users can
+
+- Add new projects
+- Add new todos for each project
+- Complete or delete todos
+- Add due dates with priority levels
+- Switch between different projects
+
+Features to add later include :
 
 
-2. Remember to focus on one aspect at a time.   
+-Ability to delete projects
+-Fix saving to local storage function
+-Login and Logout features
+-Cleaner UI
