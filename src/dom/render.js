@@ -30,6 +30,13 @@ export function renderTodosList(todosArray) {
   // Clear the current list to avoid duplicates
   todosListParentContainer.innerHTML = '';
 
+  if (!todosArray.length) {
+    todosListParentContainer.style.display = 'none';
+    return;
+  }
+
+  todosListParentContainer.style.removeProperty('display');
+
   // Loop through each to do and create a div for it
   todosArray.forEach((todo, index) => {
     // Create the todo item container
@@ -64,9 +71,9 @@ export function renderTodosList(todosArray) {
 
     // Wire up click behavior for deletion.
     todoDeleteButton.addEventListener('click', () => {
-      // Removes the todo object from the todosarray and erases the HTML
+      // Removes the todo object from the todosarray and re-renders the list
       todosArray.splice(index, 1);
-      todoListContainer.innerHTML = '';
+      renderTodosList(todosArray);
     });
 
     // Set a custom attribute or class based on completion
@@ -140,6 +147,7 @@ export function renderProjectTitle(projectName) {
 export function renderProjectAdditionDialogBox() {
   // Create the dialog box form
   const projectAdditionForm = document.querySelector('.project-addition-dialog-box');
+  projectAdditionForm.style.removeProperty('display');
   projectAdditionForm.classList.add(
     'flex',
     'gap-5',

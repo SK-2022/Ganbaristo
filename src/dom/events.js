@@ -95,6 +95,7 @@ function handleAddProjectClick(event) {
   // Reset the dialog box after addition
   const projectAdditionDialogBox = document.querySelector('.project-addition-dialog-box');
   projectAdditionDialogBox.textContent = '';
+  projectAdditionDialogBox.style.display = 'none';
 }
 
 // Add the event listeners to their respective locations
