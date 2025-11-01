@@ -1,4 +1,3 @@
-const addTaskButton = document.querySelector('.add-task-button');
 const projectList = document.querySelector('.project-list');
 const todosListParentContainer = document.querySelector('.to-do-list-parent-container');
 
