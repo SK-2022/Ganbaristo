@@ -54,7 +54,7 @@ export function renderTodosList(todosArray) {
     // Create the completion button for each to do item.
     const doneButton = document.createElement('button');
     doneButton.classList.add('done-button');
-    doneButton.textContent = 'done';
+    doneButton.textContent = 'Done';
 
     // Wire up toggle behaviour for the completion button. Remember, you have access to each todo object within this loop. Thats why this works.
     doneButton.addEventListener('click', () => {
@@ -66,7 +66,7 @@ export function renderTodosList(todosArray) {
     // Create the delete button
     const todoDeleteButton = document.createElement('button');
     todoDeleteButton.classList.add('todo-delete-button');
-    todoDeleteButton.textContent = 'delete';
+    todoDeleteButton.textContent = 'Delete';
 
     // Wire up click behavior for deletion.
     todoDeleteButton.addEventListener('click', () => {

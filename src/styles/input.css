@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .content {
   font-family: 'roboto', 'sans-serif';
@@ -7,7 +7,6 @@
   height: 100vh;
   overflow: hidden;
 }
-
 
 /* TO DO LIST CONTAINER STYLING */
 .to-do-list-container {
@@ -23,7 +22,7 @@
 /* Change color depending on priority */
 
 .priority-high {
-  color: red;
+  color: Red;
 }
 
 .priority-medium {
